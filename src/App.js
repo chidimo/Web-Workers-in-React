@@ -56,7 +56,7 @@ function App() {
 
           <button
             id="submit-btn"
-            className="submit-btn"
+            className="btn-submit"
             onClick={() => {
               if (info.num < 2) {
                 dispatch({

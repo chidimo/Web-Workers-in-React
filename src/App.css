@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   padding: 0;
@@ -30,11 +31,11 @@ body {
   align-items: center;
 }
 
-.results-container {
+.results {
   width: 50vw;
 }
 
-.results-container>p {
+.results>p {
   font-size: 24px;
 }
 
@@ -65,7 +66,7 @@ p.error {
   padding: 7.5px 10px;
 }
 
-.submit-btn {
+.btn-submit {
   padding: 10px;
   border-radius: 5px;
   border: none;
