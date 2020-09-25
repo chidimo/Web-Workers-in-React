@@ -1,8 +1,7 @@
 import React from "react";
 import "./App.css";
-import { fibWorker } from "./fib-worker";
-import { ordinal_suffix, reducer } from "./helpers";
-import { WebWorker } from "./initWorker";
+import { ordinal_suffix } from "./helpers";
+import { reducer } from './reducer'
 import { Results } from "./Results";
 
 function App() {
@@ -14,7 +13,7 @@ function App() {
 
   const runWorker = (num, id) => {
     dispatch({ type: "SET_ERROR", err: "" });
-    const worker = WebWorker(fibWorker);
+    const worker = new window.Worker('./fib-worker.js')
 
     worker.postMessage({ num });
     worker.onerror = (err) => err;
